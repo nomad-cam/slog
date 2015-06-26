@@ -8,45 +8,130 @@
 
   <!-- Bootstrap -->
   <link href="/static/css/bootstrap.min.css" rel="stylesheet">
+  <!-- <link href="/static/css/bootstrap-mods.css" rel="stylesheet"> -->
   <link href="/static/css/text-avatar.css" rel="stylesheet">
 </head>
 <body>
-  <nav class="navbar navbar-inverse">
+<!--
+<nav class="navbar navbar-inverse">
     <div class="container-fluid">
-      <div class="navbar-header">
-        <a class="navbar-brand" href="#">Ops</a>
-        <form class="navbar-form navbar-left" role="search">
-          <div class="form-group">
-            <div class="input-group">
-              <input type="text" class="form-control" placeholder="Search..." aria-label="...">
-              <div class="input-group-btn">
-                <div class="btn-group">
-                  <button type="submit" class="btn btn-default">
-                    <span class="glyphicon glyphicon-search"></span>
-                  </button>
-                  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                    <span class="caret"></span>
-                  </button>
-                  <ul>
-                    <li>Advanced</li>
-                  </ul></button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </form>
-        <div class="nav navbar-nav navbar-right">
-          <span class="avatar avatar-blue">cr</span>
+        <div class="navbar-header">
+            <a class="avatar avatar-group avatar-blue" href="#">Ops</a>
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">+<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+                <li><a href="#">Add Group</a></li>
+                <li><a href="#">Remove Group</a></li>
+                <li><a href="#">Change Group</a></li>
+            </ul>
         </div>
-      </div>
-    </div>
-  </nav>
-  <h1>Hello, World!</h1>
+        <div id="navbar" class="navbar-collapse collapse">
+            <form class="navbar-form navbar-left" role="search">
+                <div class="form-group">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search..." aria-label="...">
+                        <div class="input-group-btn">
+                            <div class="btn-group">
+                                <button type="submit" class="btn btn-default">
+                                    <span class="glyphicon glyphicon-search"></span>
+                                </button>
+                                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                                    <span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">Advanced Search</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+            <div class="nav navbar-nav navbar-right">
+                <span class="avatar avatar-blue">cr</span>
+                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                    <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Logout</a></li>
+                    <li><a href="#">Settings</a></li>
+                    <li><a href="#">Other</a></li>
+                </ul>
+            </div>
+        </div>
 
-  <!-- Place at end of doc tp enable faster load times -->
-  <script src="/static/js/jquery-2.1.4.min.js">
-  </script>
-  <script src="/static/js/bootstrap.min.js">
-  </script>
+    </div>
+</nav> -->
+
+<nav role="navigation" class="navbar navbar-inverse">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+        <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <a href="#" class="navbar-brand">
+            <a class="brand" href="/"><img src="/static/img/donkey_logo.jpg" class="img-circle" width="30%"></a>
+        </a>
+    </div>
+    <!-- Collection of nav links, forms, and other content for toggling -->
+    <div id="navbarCollapse" class="collapse navbar-collapse">
+        <ul class="nav navbar-nav">
+            <li class="active"><a href="/">Home</a></li>
+            <li class="navbar-text"> <span class="badge">OPs</span></li>
+            <li class="navbar-text"> <span class="badge">MX1</span></li>
+            <li class="navbar-text"> <span class="badge">SWAX</span></li>
+            <li class="dropdown navbar-text">
+                    <span class="badge">
+                        <a data-toggle="dropdown" class="dropdown-toggle" href="#">+/-</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Add Group</a></li>
+                            <li><a href="#">Remove Group</a></li>
+                            <li><a href="#">Change Group</a></li>
+                        </ul>
+                    </span>
+            </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+            <li class="dropdown">
+                <a data-toggle="dropdown" class="dropdown-toggle" href="#">CR<b class="caret"></b></a>
+                <ul role="menu" class="dropdown-menu">
+                    <li><a href="#">Settings</a></li>
+                    <li><a href="#">Logout</a></li>
+                </ul>
+            </li>
+        </ul>
+        <form role="search" class="navbar-form navbar-right">
+            <div class="form-group">
+                <div class="form-group">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search..." aria-label="...">
+                        <div class="input-group-btn">
+                            <div class="btn-group">
+                                <button type="submit" class="btn btn-default">
+                                    <span class="glyphicon glyphicon-search"></span>
+                                </button>
+                                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                                    <span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">Advanced Search</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</nav>
+
+<h1>Hello, World!</h1>
+
+<!-- Place at end of doc tp enable faster load times -->
+<script src="/static/js/jquery-2.1.4.min.js">
+</script>
+<script src="/static/js/bootstrap.min.js">
+</script>
 </body>
 </html>
