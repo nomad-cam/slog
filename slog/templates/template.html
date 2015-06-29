@@ -1,66 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta name="generator" content="HTML Tidy for HTML5 for Linux version 4.9.33">
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Slog</title>
+    <meta name="generator" content="HTML Tidy for HTML5 for Linux version 4.9.33">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Slog</title>
 
-  <!-- Bootstrap -->
-  <link href="/static/css/bootstrap.min.css" rel="stylesheet">
-  <!-- <link href="/static/css/bootstrap-mods.css" rel="stylesheet"> -->
-  <link href="/static/css/text-avatar.css" rel="stylesheet">
+    <!-- Bootstrap -->
+    <link href="/static/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/static/css/bootstrap-mods.css" rel="stylesheet">
+    <link href="/static/css/text-avatar.css" rel="stylesheet">
 </head>
 <body>
-<!--
-<nav class="navbar navbar-inverse">
-    <div class="container-fluid">
-        <div class="navbar-header">
-            <a class="avatar avatar-group avatar-blue" href="#">Ops</a>
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">+<span class="caret"></span></a>
-            <ul class="dropdown-menu">
-                <li><a href="#">Add Group</a></li>
-                <li><a href="#">Remove Group</a></li>
-                <li><a href="#">Change Group</a></li>
-            </ul>
-        </div>
-        <div id="navbar" class="navbar-collapse collapse">
-            <form class="navbar-form navbar-left" role="search">
-                <div class="form-group">
-                    <div class="input-group">
-                        <input type="text" class="form-control" placeholder="Search..." aria-label="...">
-                        <div class="input-group-btn">
-                            <div class="btn-group">
-                                <button type="submit" class="btn btn-default">
-                                    <span class="glyphicon glyphicon-search"></span>
-                                </button>
-                                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                                    <span class="caret"></span>
-                                </button>
-                                <ul class="dropdown-menu">
-                                    <li><a href="#">Advanced Search</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </form>
-            <div class="nav navbar-nav navbar-right">
-                <span class="avatar avatar-blue">cr</span>
-                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                    <span class="caret"></span>
-                </button>
-                <ul class="dropdown-menu">
-                    <li><a href="#">Logout</a></li>
-                    <li><a href="#">Settings</a></li>
-                    <li><a href="#">Other</a></li>
-                </ul>
-            </div>
-        </div>
 
-    </div>
-</nav> -->
-
+<!-- navbar header common to all pages -->
 <nav role="navigation" class="navbar navbar-inverse">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
@@ -126,7 +79,118 @@
     </div>
 </nav>
 
-<h1>Hello, World!</h1>
+<!-- main page elements -->
+
+
+<div class="container-fluid">
+    <nav>
+        <ul class="pager">
+            <li class="previous"><a href="#"><span aria-hidden="true">&larr;</span>Older</a></li>
+            <li class="next"><a href="#">Newer<span aria-hidden="true">&rarr;</span></a></li>
+        </ul>
+    </nav>
+
+
+    <div class="row">
+        <div class="col-md-3">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <a href="#">2015/06/28</a>
+
+                </div>
+                <div class="panel-body">
+                    <div class="row col-padding">
+                        <div class="panel panel-default" >
+                            <div class="panel-body" >
+                                02:32<br>
+                                Cameron Rodda<br>
+                                Title:<br>
+                                Summary:<br>
+                                Images... etc.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row col-padding">
+                        <div class="panel panel-default" >
+                            <div class="panel-body" >
+                                03:32<br>
+                                Cameron Rodda<br>
+                                Title:<br>
+                                Summary:<br>
+                                Images... etc.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row col-padding">
+                        <div class="panel panel-default" >
+                            <div class="panel-body" >
+                                06:32<br>
+                                Cameron Rodda<br>
+                                Title:<br>
+                                Summary:<br>
+                                Images... etc.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-footer"><a href="#">Add Entry</a></div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <a href="#">2015/06/29</a>
+
+                </div>
+                <div class="panel-body">
+                    Body Content
+                </div>
+                <div class="panel-footer">Here's a footer</div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <a href="#">Calander Nav</a>
+
+                </div>
+                <div class="panel-body">
+                    Insert Calendar here!!!!!!!!!
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <a href="#">Create new page entry</a>
+
+                </div>
+                <div class="panel-body">
+                    Input text box
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="panel panel-danger">
+                <div class="panel-heading">
+                    <a href="#">Pint to Top</a>
+
+                </div>
+                <div class="panel-body">
+                    Body Content
+                </div>
+            </div>
+            <div class="panel panel-danger">
+                <div class="panel-heading">
+                    <a href="#">Pint to Top #2</a>
+
+                </div>
+                <div class="panel-body">
+                    Pinned Body Content
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 
 <!-- Place at end of doc tp enable faster load times -->
 <script src="/static/js/jquery-2.1.4.min.js">
