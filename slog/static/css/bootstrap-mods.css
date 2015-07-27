@@ -10,11 +10,11 @@
     padding-right: 10px;
 }
 
-.nav .navbar-nav .group-display-container {
-    margin-bottom: 0px;
-    min-height: auto;
+.navbar-right{
+    padding-right: 20px; /* to fix alignment issue for right user button */
 }
 
 body {
     padding-top: 50px;  /* fixed navbar offset... */
 }
+

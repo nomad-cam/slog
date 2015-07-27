@@ -43,89 +43,28 @@
         <ul class="nav navbar-nav">
             <li class="active"><a href="/">Home</a></li>
 
-            <!-- Show the default groups -->
-            <li>
-                <div class="btn-group btn-group-sm navbar-btn">
-                    <button class="btn btn-primary" id="groups" type="button">OP</button>
-                    <button class="btn btn-primary"><span class="glyphicon glyphicon-remove"></span></button>
-                </div>
-            </li>
-            <li>
-                <div class="btn-group  btn-group-sm navbar-btn">
-                    <button class="btn btn-primary" id="groups" type="button">MX2</button>
-                    <button class="btn btn-primary"><span class="glyphicon glyphicon-remove"></span></button>
-                </div>
-            </li>
-            <li>
-                <div class="btn-group btn-group-sm navbar-btn">
-                    <button class="btn btn-primary" id="groups" type="button">SWAX</button>
-                    <button class="btn btn-primary"><span class="glyphicon glyphicon-remove"></span></button>
-                </div>
-            </li>
-            <li>
-                <div class="btn-group btn-group-sm navbar-btn">
-                    <button class="btn btn-primary" id="groups" type="button">PD</button>
-                    <button class="btn btn-primary"><span class="glyphicon glyphicon-remove"></span></button>
-                </div>
-            </li>
+            {% block navbar_btns %}
+            {% endblock %}
 
-
-            <li>
-
-                <div class="navbar-btn">
-                    <button class="btn btn-default btn-sm" type="button" data-toggle="popover-x" data-target="#group-select-modal" data-placement="bottom bottom-left">
-                        <span class="glyphicon glyphicon-plus"></span>
-                    </button>
-                </div>
-
-
-            </li>
-
-            <!-- <li class="navbar-text"> <span class="badge">OPs</span></li>
-            <li class="navbar-text"> <span class="badge">MX1</span></li>
-            <li class="navbar-text"> <span class="badge">SWAX</span></li>
-            <li class="dropdown navbar-text">
-                    <span class="badge">
-                        <a id="add-remove-group-modal-link" data-toggle="modal" data-target="add-remove-group-modal" href="#">+/-</a>
-                        <!-- <a data-toggle="dropdown" class="dropdown-toggle" href="#">+/-</a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#">Modify Groups</a></li>
-                            <li><a href="#">Change Group</a></li>
-                        </ul> -->
-                    <!-- </span>
-            </li> -->
         </ul>
         <ul class="nav navbar-nav navbar-right">
-            <li class="dropdown">
-                <a data-toggle="dropdown" class="dropdown-toggle" href="#">CR<b class="caret"></b></a>
-                <ul role="menu" class="dropdown-menu">
-                    <li><a href="#">Settings</a></li>
-                    <li><a href="#">Logout</a></li>
-                </ul>
+
+            {% block navbar_search %}
+            {%  endblock %}
+
+            <li>
+                <div class="navbar-btn">
+                    <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        CR <span class="caret"></span>
+                    </button>
+                    <!-- <a data-toggle="dropdown" class="dropdown-toggle" href="#">CR<b class="caret"></b></a> -->
+                    <ul role="menu" class="dropdown-menu">
+                        <li><a href="/options/">Options</a></li>
+                        <li><a href="/logout/">Logout</a></li>
+                    </ul>
+                </div>
             </li>
         </ul>
-        <form role="search" class="navbar-form navbar-right">
-            <div class="form-group">
-                <div class="form-group">
-                    <div class="input-group">
-                        <input type="text" class="form-control" placeholder="Search..." aria-label="...">
-                        <div class="input-group-btn">
-                            <div class="btn-group">
-                                <button type="submit" class="btn btn-default">
-                                    <span class="glyphicon glyphicon-search"></span>
-                                </button>
-                                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                                    <span class="caret"></span>
-                                </button>
-                                <ul class="dropdown-menu">
-                                    <li><a href="#">Advanced Search</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </form>
     </div>
 </nav>
 

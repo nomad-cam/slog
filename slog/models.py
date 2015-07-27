@@ -62,7 +62,7 @@ class SolUsers(db.Model):
     guest = db.Column(db.Integer)
 
 
-class SolUsersPrefsGroups(db.model):
+class SolUsersPrefsGroups(db.Model):
 
     __tablename__ = 'sol_users_prefs_groups'
 
@@ -71,7 +71,7 @@ class SolUsersPrefsGroups(db.model):
     group_id = db.Column(db.Integer,primary_key=True)
 
 
-class ElogKeywords(db.model):
+class ElogKeywords(db.Model):
 
     __tablename__ = 'elog_keywords'
 
@@ -80,7 +80,7 @@ class ElogKeywords(db.model):
     keyword_id = db.Column(db.Integer,primary_key=True)
 
 
-class ElogKeywordData(db.model):
+class ElogKeywordData(db.Model):
 
     __tablename__ = 'elog_keyword_data'
 
@@ -90,7 +90,7 @@ class ElogKeywordData(db.model):
     sort = db.Column(db.Integer)
 
 
-class ElogBeamModeData(db.model):
+class ElogBeamModeData(db.Model):
 
     __tablename__ = 'elog_beam_mode_data'
 
@@ -99,7 +99,7 @@ class ElogBeamModeData(db.model):
     beam_mode_title = db.Column(db.VARCHAR(32))
 
 
-class ElogSeverityData(db.model):
+class ElogSeverityData(db.Model):
 
     __tablename__ = 'elog_severity_data'
 
