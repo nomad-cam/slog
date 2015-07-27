@@ -14,7 +14,11 @@
     padding-right: 20px; /* to fix alignment issue for right user button */
 }
 
+.options-panel {
+    margin-top: 20px;
+}
+
 body {
-    padding-top: 50px;  /* fixed navbar offset... */
+    padding-top: 50px;  /* fixed navbar top offset... */
 }
 
