@@ -10,11 +10,13 @@ class ElogGroupData(db.Model):
     private = db.Column(db.Integer)
     urlName = db.Column(db.Text)
 
+
 class ElogGroups(db.Model):
     __tablename__ = 'elog_groups'
 
     entry_id = db.Column(db.Integer, primary_key=True)
     group_id = db.Column(db.Integer, primary_key=True)
+
 
 class ElogData(db.Model):
 
@@ -32,11 +34,14 @@ class ElogData(db.Model):
     read_only = db.Column(db.Integer)
     comment = db.Column(db.Integer)
 
+
 class SolUsers(db.Model):
 
     __tablename__ = 'sol_users'
 
-#	id	name	username	email	password	usertype	gid	registerDate	lastvisitDate	elog_hide_important	elog_collapse_all	elog_entries_per_page	site_nickname	elog_simple_editor	elog_shadow_boxer	elog_show_keywords	elog_date_format	guest
+#	id	name	username	email	password	usertype	gid	registerDate	lastvisitDate	elog_hide_important //
+#   elog_collapse_all	elog_entries_per_page	site_nickname	elog_simple_editor	elog_shadow_boxer //
+#   elog_show_keywords	elog_date_format	guest
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.VARCHAR(255))
     username = db.Column(db.VARCHAR(150))
@@ -55,3 +60,51 @@ class SolUsers(db.Model):
     elog_show_keywords = db.Column(db.Integer)
     elog_date_format = db.Column(db.Text)
     guest = db.Column(db.Integer)
+
+
+class SolUsersPrefsGroups(db.model):
+
+    __tablename__ = 'sol_users_prefs_groups'
+
+#    	user_id	group_id
+    user_id = db.Column(db.Integer,primary_key=True)
+    group_id = db.Column(db.Integer,primary_key=True)
+
+
+class ElogKeywords(db.model):
+
+    __tablename__ = 'elog_keywords'
+
+#	entry_id	keyword_id
+    entry_id = db.Column(db.Integer, primary_key=True)
+    keyword_id = db.Column(db.Integer,primary_key=True)
+
+
+class ElogKeywordData(db.model):
+
+    __tablename__ = 'elog_keyword_data'
+
+#	keyword_id	keyword_title	sort
+    keyword_id = db.Column(db.Integer, primary_key=True)
+    keyword_title = db.column(db.VARCHAR(32))
+    sort = db.Column(db.Integer)
+
+
+class ElogBeamModeData(db.model):
+
+    __tablename__ = 'elog_beam_mode_data'
+
+#	beam_mode_id	beam_mode_title
+    beam_mode_id = db.Column(db.Integer,primary_key=True)
+    beam_mode_title = db.Column(db.VARCHAR(32))
+
+
+class ElogSeverityData(db.model):
+
+    __tablename__ = 'elog_severity_data'
+
+#	severity_id	      severity_title	severity_icon
+    severity_id = db.Column(db.Integer,primary_key=True)
+    severity_title = db.Column(db.VARCHAR(32))
+    severity_icon = db.Column(db.VARCHAR(32))
+
