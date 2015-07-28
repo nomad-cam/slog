@@ -182,7 +182,22 @@
 
                 </div>
                 <div class="panel-body">
-                    Input text box
+                    <form role="search">
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Title for new entry..." aria-label="...">
+                            <span class="input-group-btn">
+                                <button type="submit" class="btn btn-primary">
+                                    <span class="glyphicon glyphicon glyphicon-new-window"></span>
+                                </button>
+                            </span>
+                        </div>
+
+                        <select class="form-control">
+                            <option>New Fault</option>
+                            <option>New BLEntry</option>
+                            <option selected>New Entry</option>
+                        </select>
+                    </form>
                 </div>
             </div>
         </div>
