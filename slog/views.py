@@ -29,7 +29,6 @@ class OptionsForm(Form):
     view_gropus = SelectMultipleField('View Groups:', choices=group_choices, validators=[DataRequired()])
     entries_per_page = SelectField('Entries per Page:', choices=page_choices, validators=[DataRequired()])
     # submit = SubmitField('Save Changes') #needed in footer of panel
-    pass
 
 @app.route('/options/', methods=['GET', 'POST'])
 def options():
