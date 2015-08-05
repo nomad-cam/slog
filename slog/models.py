@@ -1,4 +1,6 @@
 from slog.database import db
+from sqlalchemy.orm import relationship
+from sqlalchemy import ForeignKey
 
 class ElogGroupData(db.Model):
 
@@ -16,6 +18,9 @@ class ElogGroups(db.Model):
 
     entry_id = db.Column(db.Integer, primary_key=True)
     group_id = db.Column(db.Integer, primary_key=True)
+
+    elog_group_data_id = db.Column(db.Integer, db.ForeignKey('elog_group_data.group_id'))
+    elog_group_data = db.relationship('ElogGroupData')
 
 
 class ElogData(db.Model):

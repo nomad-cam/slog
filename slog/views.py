@@ -1,15 +1,17 @@
 from flask import render_template,session,redirect,url_for,request,current_app,make_response
 
+from flask.ext.sqlalchemy import SQLAlchemy
+from sqlalchemy.sql import extract,and_,or_
+
 from flask.ext.wtf import Form
 from wtforms import StringField, SelectField, SelectMultipleField, SubmitField
 from wtforms.validators import DataRequired
 
 from slog import app
 from config import data
-from slog.models import ElogGroupData,ElogGroups,ElogData,SolUsers
+from slog.models import ElogGroupData,ElogGroups,ElogData,SolUsers,SolUsersPrefsGroups,ElogKeywords,ElogKeywordData,ElogBeamModeData,ElogSeverityData
 from slog.database import db
 
-from sqlalchemy.sql import extract,and_,or_
 import ldap
 from datetime import datetime
 from avatar_generator import Avatar
@@ -22,6 +24,7 @@ def slog():
     return render_template('index.html')
 
 class OptionsForm(Form):
+    groups = ElogGroups.query(ElogGroups.group_id,ElogGroups.elog_group_data)
     group_choices = [('1','Operators'),('2','IR'),('3','Far-IR')]
     page_choices = [('1','25'),('2','50'),('3','75'),('4','100'),('5','ALL')]
     nickname = StringField('Nickname:', validators=[DataRequired()])
