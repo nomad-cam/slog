@@ -73,8 +73,31 @@
 
 {% block main_display %}
 
-<!-- main page elements -->
+<!-- page modals -->
+<div class="modal fade" id="showDayView" tabindex="-1" role="dialog" aria-labelledby="displayDate">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title" id="displayDate">displayDate</h4>
+            </div>
+            <div class="modal-body">
+                Here goes the body...
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default">Previous</button>
+                <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-default">Next</button>
+            </div>
+        </div>
+    </div>
+</div>
 
+
+
+<!-- main page elements -->
 
 <div class="container-fluid">
     <nav>
@@ -89,7 +112,7 @@
         <div class="col-md-2">
             <div class="panel panel-default">
                 <div class="panel-heading">
-                    <a href="#">2015/06/28</a>
+                    <a href="#" data-toggle="modal" data-target="#showDayView" data-date_selected="2015/06/28">2015/06/28</a>
 
                 </div>
                 <div class="panel-body">
@@ -225,3 +248,21 @@
 </div>
 
 {% endblock %}
+
+{% block scripts %}
+    {{ super() }}
+
+    <script type="javascript">
+    $(document).ready(function() {
+        $("#showDayView").on('show.bs.modal', function (e) {
+            console.log("showDayView modal triggered");
+            var link = $(e.relatedTarget); // Button that triggered the modal
+            var selectDate = link.data('date_selected');
+            alert(selectDate);
+            var modal = $(this);
+            modal.find('.modal-title').text(selectDate);
+        });
+    });
+    </script>
+
+{% endblock scripts %}
