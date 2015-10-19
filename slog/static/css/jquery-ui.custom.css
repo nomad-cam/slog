@@ -1,5 +1,8 @@
 div.ui-datepicker{
     font-size: 11.5px;
+    display: block;
+    width: auto;
+    height: auto;
 }
 
 .custom-group-btn{

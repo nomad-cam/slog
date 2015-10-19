@@ -24,7 +24,7 @@ def slog():
     return render_template('index.html')
 
 class OptionsForm(Form):
-    groups = ElogGroups.query(ElogGroups.group_id,ElogGroups.elog_group_data)
+    groups = ElogGroups.query.filter(ElogGroups.group_id,ElogGroups.elog_group_data)
     group_choices = [('1','Operators'),('2','IR'),('3','Far-IR')]
     page_choices = [('1','25'),('2','50'),('3','75'),('4','100'),('5','ALL')]
     nickname = StringField('Nickname:', validators=[DataRequired()])
@@ -46,11 +46,12 @@ def avatar():
     try:
         initials = request.args.get('name')
         size = int(request.args.get('size'))
+        colour = request.args.get('colour')
     except Exception:
         initials = "#"
         size = 128
 
-    avatar = Avatar.generate(size=size, string=initials, filetype='PNG')
+    avatar = Avatar.generate(size=size, string=initials, filetype='PNG', colour=colour)
     headers = {'Content-Type': 'image/png'}
     return make_response(avatar, 200, headers)
 
